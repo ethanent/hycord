@@ -111,8 +111,6 @@ client.on('message', async (message) => {
 
 				let guildData = (await HypixelClient.getGuild(targetGuild.guild)).guild
 
-				console.log(guildData)
-
 				let guildRich = new Discord.RichEmbed()
 
 				guildRich.setThumbnail('https://hypixel.net/data/guild_banners/100x200/' + guildData._id + '.png')
