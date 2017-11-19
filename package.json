@@ -1,0 +1,30 @@
+{
+  "name": "hycord",
+  "version": "1.0.0",
+  "description": "The public Discord bot for Hypixel integration awesomeness.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanent/hycord.git"
+  },
+  "keywords": [
+    "hypixel",
+    "discord",
+    "discord-bot",
+    "hypixel-api",
+    "hypixel-discord"
+  ],
+  "author": "Ethan Davis",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/ethanent/hycord/issues"
+  },
+  "homepage": "https://github.com/ethanent/hycord#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "hypixel-api": "^1.0.0"
+  }
+}
