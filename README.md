@@ -24,6 +24,12 @@ Use the [bot add link](https://discordapp.com/oauth2/authorize?client_id=3816336
 
 ![Hycord help command](https://i.imgur.com/c1maZrZ.png)
 
+### About Hycord
+
+Hycord is a Discord bot I created after realizing that Hypixel-Discord integration would be super nifty, especially for guild and community servers.
+
+Hycord is powered by my Hypixel API client library for Node, [hypixel-api](https://github.com/ethanent/hypixel-api).
+
 ### Running Hycord yourself
 
 If you're interested in running your own Hycord bot instance, execute `index.js` like so:
