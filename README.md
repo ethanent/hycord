@@ -8,3 +8,12 @@
 
 ### Adding Hycord to your server
 
+Use the [bot add link](https://discordapp.com/oauth2/authorize?client_id=381633622148513802&scope=bot&permissions=104008769) to add Hycord to your server!
+
+### Running Hycord yourself
+
+If you're interested in running your own Hycord bot, execute `index.js` like so:
+
+```shell
+node index.js <Discord bot token> <Hypixel API key>
+```
