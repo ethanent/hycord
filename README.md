@@ -1,4 +1,10 @@
-<p align="center" style="text-align: center; font-size: 3em;"><img src="https://api.hypixel.net/assets/images/logo.png" width="300" style="margin-right: 3vw" alt="Hypixel logo"/><img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Discord_logo_svg.svg" width="300" alt="Discord logo"/></p>
+<p align="center" style="text-align: center; font-size: 2.6em">
+	<img src="https://api.hypixel.net/assets/images/logo.png" width="300" alt="Hypixel logo"/>
+	<br />
+	+
+	<br />
+	<img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Discord_logo_svg.svg" width="300" alt="Discord logo"/>
+</p>
 
 ---
 
@@ -12,7 +18,7 @@ Use the [bot add link](https://discordapp.com/oauth2/authorize?client_id=3816336
 
 ### Running Hycord yourself
 
-If you're interested in running your own Hycord bot, execute `index.js` like so:
+If you're interested in running your own Hycord bot instance, execute `index.js` like so:
 
 ```shell
 node index.js <Discord bot token> <Hypixel API key>
