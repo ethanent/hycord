@@ -81,7 +81,6 @@ client.on('message', async (message) => {
 				playerRich.addField('Rank', (hypixelPlayer.rank || hypixelPlayer.packageRank || hypixelPlayer.newPackageRank || 'None').toString().replace(/_/g, ' '), true)
 				playerRich.addField('Hypixel Level', hypixelPlayer.networkLevel || 'Not available', true)
 				playerRich.addField('Karma', hypixelPlayer.karma || 'Not available', true)
-				playerRich.addField('Hypixel Experience', hypixelPlayer.networkExp || 'Not available', true)
 				playerRich.addField('Client Version', hypixelPlayer.mcVersionRp || 'Not available', true)
 				playerRich.addField('First Login', hypixelPlayer.firstLogin ? moment(hypixelPlayer.firstLogin).calendar() : 'Not available', true)
 				playerRich.addField('Last Login', hypixelPlayer.lastLogin ? moment(hypixelPlayer.lastLogin).calendar() : 'Not available', true)
