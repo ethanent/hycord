@@ -1,9 +1,9 @@
-<p align="center" style="text-align: center; font-size: 2.3em">
-	<img src="https://api.hypixel.net/assets/images/logo.png" width="200" alt="Hypixel logo"/>
+<p align="center" style="text-align: center; font-size: 2.6em">
+	<img src="https://api.hypixel.net/assets/images/logo.png" width="300" alt="Hypixel logo"/>
 	<br />
 	+
 	<br />
-	<img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Discord_logo_svg.svg" width="200" alt="Discord logo"/>
+	<img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Discord_logo_svg.svg" width="300" alt="Discord logo"/>
 </p>
 
 ---
