@@ -25,6 +25,7 @@
   "homepage": "https://github.com/ethanent/hycord#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "hypixel-api": "^1.0.0"
+    "hypixel-api": "^1.0.0",
+    "moment": "^2.19.2"
   }
 }
