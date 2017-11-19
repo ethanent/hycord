@@ -1,5 +1,3 @@
-// https://discordapp.com/oauth2/authorize?client_id=381633622148513802&scope=bot&permissions=104008769
-
 const Discord = require('discord.js')
 const HypixelAPI = require('hypixel-api')
 const moment = require('moment')
@@ -71,8 +69,6 @@ client.on('message', async (message) => {
 					message.channel.send('Hmm, that player doesn\'t seem to exist!')
 					return
 				}
-
-				console.log(hypixelPlayer)
 
 				let playerRich = new Discord.RichEmbed()
 
