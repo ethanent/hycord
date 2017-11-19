@@ -16,6 +16,14 @@
 
 Use the [bot add link](https://discordapp.com/oauth2/authorize?client_id=381633622148513802&scope=bot&permissions=104008769) to add Hycord to your server!
 
+### Hycord in action
+
+![Hycord player command](https://i.imgur.com/a1h0Jju.png)
+
+![Hycord guild command](https://i.imgur.com/AgbvXTt.png)
+
+![Hycord help command](https://i.imgur.com/c1maZrZ.png)
+
 ### Running Hycord yourself
 
 If you're interested in running your own Hycord bot instance, execute `index.js` like so:
