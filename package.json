@@ -1,6 +1,6 @@
 {
   "name": "hycord",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "The public Discord bot for Hypixel integration awesomeness.",
   "main": "index.js",
   "scripts": {

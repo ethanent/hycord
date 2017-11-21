@@ -17,6 +17,19 @@ client.on('ready', () => {
 	client.user.setGame('!hycord')
 
 	console.log('The bot has been initialized!')
+
+	let installedGuilds = client.guilds.array()
+
+	console.log('This bot is available on ' + installedGuilds.length + ' guilds:')
+
+	let totalMembers = 0
+
+	for (let i = 0; i < installedGuilds.length; i++) {
+		totalMembers += installedGuilds[i].memberCount
+		console.log(installedGuilds[i].name + ': ' + installedGuilds[i].memberCount + ' members')
+	}
+
+	console.log('Total members: ' + totalMembers)
 })
 
 client.on('message', async (message) => {
@@ -36,7 +49,7 @@ client.on('message', async (message) => {
 	}
 
 	const commandComponents = messageContent.split('!')[1].split(' ')
-	const baseCommand = commandComponents[0]
+	const baseCommand = commandComponents[0].toLowerCase()
 	const commandArgs = (commandComponents.length > 1 ? commandComponents.slice(1) : [])
 
 	switch (baseCommand) {
@@ -61,11 +74,14 @@ client.on('message', async (message) => {
 			if (commandArgs.length > 0) {
 				let hypixelPlayer
 
+				message.channel.startTyping()
+
 				try {
 					hypixelPlayer = (await HypixelClient.getPlayer('name', commandArgs[0])).player
 				}
 				catch (err) {
 					console.log(err)
+					message.channel.stopTyping()
 					message.channel.send('Hmm, that player doesn\'t seem to exist!')
 					return
 				}
@@ -95,6 +111,8 @@ client.on('message', async (message) => {
 
 				playerRich.addField('Guild', (playerGuild ? '[' + playerGuild.name + ' [' + playerGuild.tag + ']' + '](https://hypixel.net/guilds/' + playerGuild._id + '/)' : 'None'))
 
+				message.channel.stopTyping()
+
 				message.channel.send(playerRich)
 			}
 			else {
@@ -103,7 +121,9 @@ client.on('message', async (message) => {
 			break
 		case 'guild':
 			if (commandArgs.length > 0) {
+				message.channel.startTyping()
 				let targetGuild = await HypixelClient.findGuild('name', message.content.split('!' + baseCommand + ' ')[1])
+				message.channel.stopTyping()
 				if (targetGuild.guild === null) {
 					message.channel.send('Hmm, that guild doesn\'t seem to exist!')
 					return
