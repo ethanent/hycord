@@ -95,10 +95,10 @@ client.on('message', async (message) => {
 				playerRich.setColor('#30DB09')
 
                                 if (hypixelPlayer.newPackageRank) {
-                                	HypixelRank = hypixelPlayer.monthlyPackageRank === "SUPERSTAR" ? "MVP++" : hypixelPlayer.newPackageRank;
+					HypixelRank = hypixelPlayer.monthlyPackageRank === "SUPERSTAR" ? "MVP++" : hypixelPlayer.newPackageRank;
                                 }
-
-                                playerRich.addField('Rank', (hypixelPlayer.rank || hypixelPlayer.packageRank || HypixelRank || 'None').toString().replace(/_/g, ' '), true)
+				
+				playerRich.addField('Rank', (hypixelPlayer.rank || hypixelPlayer.packageRank || HypixelRank || 'None').toString().replace(/_/g, ' '), true)
 				playerRich.addField('Hypixel Level', hypixelPlayer.networkLevel || 'Not available', true)
 				playerRich.addField('Karma', hypixelPlayer.karma || 'Not available', true)
 				playerRich.addField('Client Version', hypixelPlayer.mcVersionRp || 'Not available', true)
