@@ -63,7 +63,10 @@ client.on('message', async (message) => {
 
 	if (messageContent.indexOf('!') !== 0) return
 
-	await message.channel.send(createRichEmbed('Error', 'I need the **Administrator** permission to function!', '#E74C3C'))
+	if (!message.guild.me.hasPermission('ADMINISTRATOR')) {
+		console.log('Still need administrator permission in ' + message.guild.name)
+		await message.channel.send(createRichEmbed('Error', 'I need the **Administrator** permission to function!', '#E74C3C'))
+	}
 
 	const commandComponents = messageContent.split('!')[1].split(' ')
 	const baseCommand = commandComponents[0].toLowerCase()
