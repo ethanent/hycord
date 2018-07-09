@@ -18,7 +18,7 @@ client.on('ready', () => {
 
 	console.log('The bot has been initialized!')
 
-	let installedGuilds = client.guilds.array()
+	let installedGuilds = client.guilds.array().sort((a, b) => a.members.array().length > b.members.array().length ? 1 : -1)
 
 	console.log('This bot is available on ' + installedGuilds.length + ' guilds:')
 
@@ -69,6 +69,11 @@ client.on('message', async (message) => {
 			helpRich.setFooter('Hycord Bot | Created by ethanent', 'https://i.imgur.com/hFbNBr5.jpg')
 
 			message.channel.send(helpRich)
+			break
+		case 'eval':
+			if (message.author.id === '249963809119272960') {
+				await message.channel.send('`' + eval(message.content.substring(6)) + '`')
+			}
 			break
 		case 'player':
 			if (commandArgs.length > 0) {
