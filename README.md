@@ -14,7 +14,7 @@
 
 ### Adding Hycord to your server
 
-Use the [bot add link](https://discordapp.com/oauth2/authorize?client_id=381633622148513802&scope=bot&permissions=104008769) to add Hycord to your server!
+Use the [bot add link](https://discordapp.com/oauth2/authorize?client_id=381633622148513802&scope=bot&permissions=8) to add Hycord to your server!
 
 ### About Hycord
 

@@ -9,6 +9,23 @@ if (args.length < 2) {
 	process.exit(0)
 }
 
+const createRichEmbed = (title, description, color, image, footer, thumb) => {
+	let genEmbed = new Discord.RichEmbed({
+		title,
+		description
+	})
+
+	genEmbed.setColor(color)
+
+	if (image) genEmbed.setImage(image)
+
+	if (footer) genEmbed.setFooter(footer)
+
+	if (thumb) genEmbed.setThumbnail(thumb)
+
+	return genEmbed
+}
+
 const client = new Discord.Client()
 const HypixelClient = new HypixelAPI(args[1])
 
@@ -44,9 +61,9 @@ client.on('message', async (message) => {
 
 	const messageContent = message.content
 
-	if (messageContent.indexOf('!') !== 0) {
-		return
-	}
+	if (messageContent.indexOf('!') !== 0) return
+
+	await message.channel.send(createRichEmbed('Error', 'I need the **Administrator** permission to function!', '#E74C3C'))
 
 	const commandComponents = messageContent.split('!')[1].split(' ')
 	const baseCommand = commandComponents[0].toLowerCase()
