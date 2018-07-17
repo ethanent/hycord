@@ -119,7 +119,11 @@ client.on('message', async (message) => {
 				playerRich.setFooter('Hycord Bot | Created by ethanent', 'https://i.imgur.com/hFbNBr5.jpg')
 				playerRich.setColor('#30DB09')
 
-				playerRich.addField('Rank', (hypixelPlayer.rank || hypixelPlayer.packageRank || hypixelPlayer.newPackageRank || 'None').toString().replace(/_/g, ' '), true)
+                                if (hypixelPlayer.newPackageRank) {
+					HypixelRank = hypixelPlayer.monthlyPackageRank === "SUPERSTAR" ? "MVP++" : hypixelPlayer.newPackageRank;
+                                }
+				
+				playerRich.addField('Rank', (hypixelPlayer.rank || hypixelPlayer.packageRank || HypixelRank || 'None').toString().replace(/_/g, ' '), true)
 				playerRich.addField('Hypixel Level', hypixelPlayer.networkLevel || 'Not available', true)
 				playerRich.addField('Karma', hypixelPlayer.karma || 'Not available', true)
 				playerRich.addField('Client Version', hypixelPlayer.mcVersionRp || 'Not available', true)
